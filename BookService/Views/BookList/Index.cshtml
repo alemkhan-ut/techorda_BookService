@@ -1,0 +1,21 @@
+﻿@model BookModel[]
+
+
+<h2>ВСЕ КНИГИ</h2>
+
+@foreach (var book in Model)
+{
+    <div class="card">
+        <div class="card-header" style="font-weight:bold">
+            @book.Title
+        </div>
+        <div class="card-body">
+            @book.Description
+        </div>
+        <div class="card-footer">
+            @book.ReleaseYear - @book.Author
+        </div>
+    </div>
+
+    <br />
+}
